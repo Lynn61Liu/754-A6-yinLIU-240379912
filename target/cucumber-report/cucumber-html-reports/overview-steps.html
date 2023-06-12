@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>11 Jun 2023, 22:52</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.CucumberSpringConfiguration.setUp()</td>
+              <td>43</td>
+              <td class="duration" data-value="229418">0.000</td>
+              <td class="duration" data-value="229418">0.006</td>
+              <td class="duration" data-value="9865000">0.009</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.i_am_a_user_on_the_application()</td>
+              <td>1</td>
+              <td class="duration" data-value="435317000">0.435</td>
+              <td class="duration" data-value="435317000">0.435</td>
+              <td class="duration" data-value="435317000">0.435</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.i_am_on_the_analytics_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="261086000">0.261</td>
+              <td class="duration" data-value="261086000">0.339</td>
+              <td class="duration" data-value="783258000">0.783</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.i_click_the_navigation_page_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="307797000">0.307</td>
+              <td class="duration" data-value="307797000">0.307</td>
+              <td class="duration" data-value="307797000">0.307</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.i_should_be_able_to_see_a_progress_bar_for_my_course()</td>
+              <td>1</td>
+              <td class="duration" data-value="63219000">0.063</td>
+              <td class="duration" data-value="63219000">0.063</td>
+              <td class="duration" data-value="63219000">0.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.i_should_be_able_to_see_my_progress_on_the_analytics_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="126579000">0.126</td>
+              <td class="duration" data-value="126579000">0.126</td>
+              <td class="duration" data-value="126579000">0.126</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.i_should_be_redirected_to_the_analytics_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="7245000">0.007</td>
+              <td class="duration" data-value="7245000">0.007</td>
+              <td class="duration" data-value="7245000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="2085805232">2.085</td>
+              <td class="duration" data-value="2085805232">4.372</td>
+              <td class="duration" data-value="89689625000">1:29.689</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="28441">0.000</td>
+              <td class="duration" data-value="28441">0.000</td>
+              <td class="duration" data-value="1223000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.the_analytics_page_is_loaded()</td>
+              <td>3</td>
+              <td class="duration" data-value="8457000">0.008</td>
+              <td class="duration" data-value="8457000">0.009</td>
+              <td class="duration" data-value="25371000">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.AnalyticsStepDefinitions.the_progress_bar_should_show_an_updated_visual_compared_to_last_time()</td>
+              <td>1</td>
+              <td class="duration" data-value="28091000">0.028</td>
+              <td class="duration" data-value="28091000">0.028</td>
+              <td class="duration" data-value="28091000">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.allLearningModulesForTheCourseAreDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="6010665000">6.010</td>
+              <td class="duration" data-value="6010665000">6.010</td>
+              <td class="duration" data-value="6010665000">6.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.allPracticeModulesForTheCourseAreDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="35792000">0.035</td>
+              <td class="duration" data-value="35792000">0.035</td>
+              <td class="duration" data-value="35792000">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.iClickOnTheEnrolInCourseButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="118010000">0.118</td>
+              <td class="duration" data-value="118010000">0.118</td>
+              <td class="duration" data-value="118010000">0.118</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.iVisitTheCourseOverviewPageWithId(int)</td>
+              <td>7</td>
+              <td class="duration" data-value="290117571">0.290</td>
+              <td class="duration" data-value="290117571">0.710</td>
+              <td class="duration" data-value="2030823000">2.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.i_click_on_the_navigate(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="1839349666">1.839</td>
+              <td class="duration" data-value="1839349666">2.106</td>
+              <td class="duration" data-value="5518049000">5.518</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="1437395">0.001</td>
+              <td class="duration" data-value="1437395">0.037</td>
+              <td class="duration" data-value="61808000">0.061</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="27744">0.000</td>
+              <td class="duration" data-value="27744">0.000</td>
+              <td class="duration" data-value="1193000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseCategoryIsDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="21760000">0.021</td>
+              <td class="duration" data-value="21760000">0.021</td>
+              <td class="duration" data-value="21760000">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseDescriptionIsDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="20811000">0.020</td>
+              <td class="duration" data-value="20811000">0.020</td>
+              <td class="duration" data-value="20811000">0.020</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseFormatIsDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="22316000">0.022</td>
+              <td class="duration" data-value="22316000">0.022</td>
+              <td class="duration" data-value="22316000">0.022</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseIsAddedToMyEnrolledCourses()</td>
+              <td>1</td>
+              <td class="duration" data-value="42609000">0.042</td>
+              <td class="duration" data-value="42609000">0.042</td>
+              <td class="duration" data-value="42609000">0.042</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseNameIsDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="35879000">0.035</td>
+              <td class="duration" data-value="35879000">0.035</td>
+              <td class="duration" data-value="35879000">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseOverviewPageIsDisplayed()</td>
+              <td>7</td>
+              <td class="duration" data-value="7994142">0.007</td>
+              <td class="duration" data-value="7994142">0.010</td>
+              <td class="duration" data-value="55959000">0.055</td>
+              <td class="failed">85.71%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseProgressIsDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="73347000">0.073</td>
+              <td class="duration" data-value="73347000">0.073</td>
+              <td class="duration" data-value="73347000">0.073</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseSyllabusIsOrderedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="164319000">0.164</td>
+              <td class="duration" data-value="164319000">0.164</td>
+              <td class="duration" data-value="164319000">0.164</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseSyllabusIsPresent()</td>
+              <td>1</td>
+              <td class="duration" data-value="14273000">0.014</td>
+              <td class="duration" data-value="14273000">0.014</td>
+              <td class="duration" data-value="14273000">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theCourseTopicIsDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="21409000">0.021</td>
+              <td class="duration" data-value="21409000">0.021</td>
+              <td class="duration" data-value="21409000">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theDifficultyRatingOfTheCourseIsDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="21250000">0.021</td>
+              <td class="duration" data-value="21250000">0.021</td>
+              <td class="duration" data-value="21250000">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.theEstimatedTimeOfTheCourseIsDisplayedCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="21232000">0.021</td>
+              <td class="duration" data-value="21232000">0.021</td>
+              <td class="duration" data-value="21232000">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.thePracticeListIsDisplayedInOrderOfDates()</td>
+              <td>1</td>
+              <td class="duration" data-value="31000">0.000</td>
+              <td class="duration" data-value="31000">0.000</td>
+              <td class="duration" data-value="31000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.CourseOverviewStepDefinitions.the_correct_learning_module_page_is_loaded_with_the_correct(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="7335000">0.007</td>
+              <td class="duration" data-value="7335000">0.008</td>
+              <td class="duration" data-value="22005000">0.022</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQADetailStepDefinitions.I_click_the_button_of_one_Question(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="73309333">0.073</td>
+              <td class="duration" data-value="73309333">0.075</td>
+              <td class="duration" data-value="219928000">0.219</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQADetailStepDefinitions.i_see_a_list_of_question_titles_on_the_help_faq_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="734722000">0.734</td>
+              <td class="duration" data-value="734722000">0.832</td>
+              <td class="duration" data-value="2204166000">2.204</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQADetailStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="565976">0.000</td>
+              <td class="duration" data-value="565976">0.004</td>
+              <td class="duration" data-value="24337000">0.024</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQADetailStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="27000">0.000</td>
+              <td class="duration" data-value="27000">0.000</td>
+              <td class="duration" data-value="1161000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQADetailStepDefinitions.this_TextID_style_is_answerDisplayStyle(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="26431333">0.026</td>
+              <td class="duration" data-value="26431333">0.029</td>
+              <td class="duration" data-value="79294000">0.079</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQAviewStepDefinitions.i_click_the_help_faq_links_in_page_foot()</td>
+              <td>1</td>
+              <td class="duration" data-value="983304000">0.983</td>
+              <td class="duration" data-value="983304000">0.983</td>
+              <td class="duration" data-value="983304000">0.983</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQAviewStepDefinitions.i_navigate_the_login_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2550078000">2.550</td>
+              <td class="duration" data-value="2550078000">2.550</td>
+              <td class="duration" data-value="2550078000">2.550</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQAviewStepDefinitions.i_should_see_FAQ_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="12273000">0.012</td>
+              <td class="duration" data-value="12273000">0.012</td>
+              <td class="duration" data-value="12273000">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQAviewStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="363139">0.000</td>
+              <td class="duration" data-value="363139">0.002</td>
+              <td class="duration" data-value="15615000">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.FQAviewStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="86860">0.000</td>
+              <td class="duration" data-value="86860">0.000</td>
+              <td class="duration" data-value="3735000">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LearnStepDefinition.iShouldSeeTheLearningContents()</td>
+              <td>1</td>
+              <td class="duration" data-value="156038000">0.156</td>
+              <td class="duration" data-value="156038000">0.156</td>
+              <td class="duration" data-value="156038000">0.156</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LearnStepDefinition.iVisitTheLearningPageWithTheId(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="1532749000">1.532</td>
+              <td class="duration" data-value="1532749000">1.532</td>
+              <td class="duration" data-value="1532749000">1.532</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LearnStepDefinition.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="556813">0.000</td>
+              <td class="duration" data-value="556813">0.005</td>
+              <td class="duration" data-value="23943000">0.023</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LearnStepDefinition.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="17744">0.000</td>
+              <td class="duration" data-value="17744">0.000</td>
+              <td class="duration" data-value="763000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LearnStepDefinition.theLearningPageLoads()</td>
+              <td>1</td>
+              <td class="duration" data-value="6155000">0.006</td>
+              <td class="duration" data-value="6155000">0.006</td>
+              <td class="duration" data-value="6155000">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LoginStepDefinitions.i_enter_as_password_field(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="126294000">0.126</td>
+              <td class="duration" data-value="126294000">0.126</td>
+              <td class="duration" data-value="126294000">0.126</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LoginStepDefinitions.i_enter_as_user_name_field(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="117445000">0.117</td>
+              <td class="duration" data-value="117445000">0.117</td>
+              <td class="duration" data-value="117445000">0.117</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LoginStepDefinitions.i_press_the_submit_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="195617000">0.195</td>
+              <td class="duration" data-value="195617000">0.195</td>
+              <td class="duration" data-value="195617000">0.195</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LoginStepDefinitions.i_should_see_the_welcome_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="36204000">0.036</td>
+              <td class="duration" data-value="36204000">0.036</td>
+              <td class="duration" data-value="36204000">0.036</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LoginStepDefinitions.i_visit_the_login_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="649744000">0.649</td>
+              <td class="duration" data-value="649744000">0.649</td>
+              <td class="duration" data-value="649744000">0.649</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LoginStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="475139">0.000</td>
+              <td class="duration" data-value="475139">0.006</td>
+              <td class="duration" data-value="20431000">0.020</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.LoginStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="29744">0.000</td>
+              <td class="duration" data-value="29744">0.000</td>
+              <td class="duration" data-value="1279000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.iClickOnTheRetryPracticeButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="191307000">0.191</td>
+              <td class="duration" data-value="191307000">0.191</td>
+              <td class="duration" data-value="191307000">0.191</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.iVisitTheResultsOfAPracticeSession()</td>
+              <td>1</td>
+              <td class="duration" data-value="433298000">0.433</td>
+              <td class="duration" data-value="433298000">0.433</td>
+              <td class="duration" data-value="433298000">0.433</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.iVisitTheResultsOfAPracticeSessionWhereIGotFourOutOfSixCorrect()</td>
+              <td>3</td>
+              <td class="duration" data-value="266741333">0.266</td>
+              <td class="duration" data-value="266741333">0.297</td>
+              <td class="duration" data-value="800224000">0.800</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="1028581">0.001</td>
+              <td class="duration" data-value="1028581">0.021</td>
+              <td class="duration" data-value="44229000">0.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.theAnswersForThoseQuestionsAreDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="68306000">0.068</td>
+              <td class="duration" data-value="68306000">0.068</td>
+              <td class="duration" data-value="68306000">0.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.thePageShouldChangeToThePracticePage()</td>
+              <td>1</td>
+              <td class="duration" data-value="6436000">0.006</td>
+              <td class="duration" data-value="6436000">0.006</td>
+              <td class="duration" data-value="6436000">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.thePercentageShouldBePercent(double)</td>
+              <td>1</td>
+              <td class="duration" data-value="29469000">0.029</td>
+              <td class="duration" data-value="29469000">0.029</td>
+              <td class="duration" data-value="29469000">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.thePracticeResultsPageSuccessfullyLoads()</td>
+              <td>4</td>
+              <td class="duration" data-value="51549500">0.051</td>
+              <td class="duration" data-value="51549500">0.184</td>
+              <td class="duration" data-value="206198000">0.206</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.theQuestionsIGotWrongShouldBeListed()</td>
+              <td>1</td>
+              <td class="duration" data-value="51209000">0.051</td>
+              <td class="duration" data-value="51209000">0.051</td>
+              <td class="duration" data-value="51209000">0.051</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.thereShouldBeAPassOrFailResultDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="47313000">0.047</td>
+              <td class="duration" data-value="47313000">0.047</td>
+              <td class="duration" data-value="47313000">0.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.PracticeResultsStepDefinitions.thereShouldBeAPercentageOfHowManyQuestionsIAnsweredCorrectly()</td>
+              <td>1</td>
+              <td class="duration" data-value="43452000">0.043</td>
+              <td class="duration" data-value="43452000">0.043</td>
+              <td class="duration" data-value="43452000">0.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.i_change_the_visibility_of_a_profile_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="75290000">0.075</td>
+              <td class="duration" data-value="75290000">0.075</td>
+              <td class="duration" data-value="75290000">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.i_change_the_visibility_of_my_profile()</td>
+              <td>1</td>
+              <td class="duration" data-value="73702000">0.073</td>
+              <td class="duration" data-value="73702000">0.073</td>
+              <td class="duration" data-value="73702000">0.073</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.i_press_the_save_button_for_profile()</td>
+              <td>1</td>
+              <td class="duration" data-value="113572000">0.113</td>
+              <td class="duration" data-value="113572000">0.113</td>
+              <td class="duration" data-value="113572000">0.113</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.i_save_the_profile_visibility()</td>
+              <td>1</td>
+              <td class="duration" data-value="115506000">0.115</td>
+              <td class="duration" data-value="115506000">0.115</td>
+              <td class="duration" data-value="115506000">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.i_visit_my_profile_page_with_id(java.lang.Integer)</td>
+              <td>2</td>
+              <td class="duration" data-value="271115000">0.271</td>
+              <td class="duration" data-value="271115000">0.444</td>
+              <td class="duration" data-value="542230000">0.542</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="450325">0.000</td>
+              <td class="duration" data-value="450325">0.005</td>
+              <td class="duration" data-value="19364000">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="33837">0.000</td>
+              <td class="duration" data-value="33837">0.000</td>
+              <td class="duration" data-value="1455000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.the_overall_visibility_of_my_profile_should_be_saved()</td>
+              <td>1</td>
+              <td class="duration" data-value="32787000">0.032</td>
+              <td class="duration" data-value="32787000">0.032</td>
+              <td class="duration" data-value="32787000">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.ProfileStepDefinitions.the_visibility_of_the_profile_sections_should_save()</td>
+              <td>1</td>
+              <td class="duration" data-value="32666000">0.032</td>
+              <td class="duration" data-value="32666000">0.032</td>
+              <td class="duration" data-value="32666000">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.i_enter_as_the_email_field(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="193846666">0.193</td>
+              <td class="duration" data-value="193846666">0.213</td>
+              <td class="duration" data-value="581540000">0.581</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.i_enter_as_the_password_field(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="86434333">0.086</td>
+              <td class="duration" data-value="86434333">0.091</td>
+              <td class="duration" data-value="259303000">0.259</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.i_enter_as_the_username_field(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="73550000">0.073</td>
+              <td class="duration" data-value="73550000">0.083</td>
+              <td class="duration" data-value="220650000">0.220</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.i_press_the_register_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="98634000">0.098</td>
+              <td class="duration" data-value="98634000">0.105</td>
+              <td class="duration" data-value="295902000">0.295</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.i_should_receive_a_message_indicating_i_have_created_an_account()</td>
+              <td>1</td>
+              <td class="duration" data-value="32097000">0.032</td>
+              <td class="duration" data-value="32097000">0.032</td>
+              <td class="duration" data-value="32097000">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.i_should_receive_a_message_indicating_the_email_is_taken()</td>
+              <td>1</td>
+              <td class="duration" data-value="31549000">0.031</td>
+              <td class="duration" data-value="31549000">0.031</td>
+              <td class="duration" data-value="31549000">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.i_should_receive_a_message_indicating_the_username_is_taken()</td>
+              <td>1</td>
+              <td class="duration" data-value="34250000">0.034</td>
+              <td class="duration" data-value="34250000">0.034</td>
+              <td class="duration" data-value="34250000">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.i_visit_the_register_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="319766666">0.319</td>
+              <td class="duration" data-value="319766666">0.409</td>
+              <td class="duration" data-value="959300000">0.959</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="489674">0.000</td>
+              <td class="duration" data-value="489674">0.007</td>
+              <td class="duration" data-value="21056000">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.RegisterStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="3430469604">3.430</td>
+              <td class="duration" data-value="3430469604">1:53.720</td>
+              <td class="duration" data-value="147510193000">2:27.510</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SearchCourseStepDefinitions.I_click_on_the_search_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="119994500">0.119</td>
+              <td class="duration" data-value="119994500">0.155</td>
+              <td class="duration" data-value="479978000">0.479</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SearchCourseStepDefinitions.I_see_have_search_bar_at_the_search_page()</td>
+              <td>4</td>
+              <td class="duration" data-value="640850250">0.640</td>
+              <td class="duration" data-value="640850250">0.931</td>
+              <td class="duration" data-value="2563401000">2.563</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SearchCourseStepDefinitions.I_should_see_search_page_with_num_course(int)</td>
+              <td>4</td>
+              <td class="duration" data-value="16914250">0.016</td>
+              <td class="duration" data-value="16914250">0.021</td>
+              <td class="duration" data-value="67657000">0.067</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SearchCourseStepDefinitions.I_type_the_searchWorld_in_the_input(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="190199500">0.190</td>
+              <td class="duration" data-value="190199500">0.226</td>
+              <td class="duration" data-value="760798000">0.760</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SearchCourseStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="735813">0.000</td>
+              <td class="duration" data-value="735813">0.006</td>
+              <td class="duration" data-value="31640000">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SearchCourseStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="116232">0.000</td>
+              <td class="duration" data-value="116232">0.001</td>
+              <td class="duration" data-value="4998000">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SettingsStepDefinitions.i_am_in_the_settings_page(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="95698000">0.095</td>
+              <td class="duration" data-value="95698000">0.095</td>
+              <td class="duration" data-value="95698000">0.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SettingsStepDefinitions.i_change_a_user_setting()</td>
+              <td>1</td>
+              <td class="duration" data-value="70242000">0.070</td>
+              <td class="duration" data-value="70242000">0.070</td>
+              <td class="duration" data-value="70242000">0.070</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SettingsStepDefinitions.i_press_the_save_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="106715000">0.106</td>
+              <td class="duration" data-value="106715000">0.106</td>
+              <td class="duration" data-value="106715000">0.106</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SettingsStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="468697">0.000</td>
+              <td class="duration" data-value="468697">0.003</td>
+              <td class="duration" data-value="20154000">0.020</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SettingsStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="17930">0.000</td>
+              <td class="duration" data-value="17930">0.000</td>
+              <td class="duration" data-value="771000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.SettingsStepDefinitions.the_settings_should_save()</td>
+              <td>1</td>
+              <td class="duration" data-value="32476000">0.032</td>
+              <td class="duration" data-value="32476000">0.032</td>
+              <td class="duration" data-value="32476000">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_achieve_an_achievement()</td>
+              <td>1</td>
+              <td class="duration" data-value="7567000">0.007</td>
+              <td class="duration" data-value="7567000">0.007</td>
+              <td class="duration" data-value="7567000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_am_on_the_achievements_page_with_id(int)</td>
+              <td>3</td>
+              <td class="duration" data-value="249330333">0.249</td>
+              <td class="duration" data-value="249330333">0.263</td>
+              <td class="duration" data-value="747991000">0.747</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_can_see_all_achievements()</td>
+              <td>1</td>
+              <td class="duration" data-value="44424000">0.044</td>
+              <td class="duration" data-value="44424000">0.044</td>
+              <td class="duration" data-value="44424000">0.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_can_see_the_achievements_that_i_have_achieved()</td>
+              <td>1</td>
+              <td class="duration" data-value="33236000">0.033</td>
+              <td class="duration" data-value="33236000">0.033</td>
+              <td class="duration" data-value="33236000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_can_see_the_achievements_that_i_haven_t_achieved_yet()</td>
+              <td>1</td>
+              <td class="duration" data-value="32662000">0.032</td>
+              <td class="duration" data-value="32662000">0.032</td>
+              <td class="duration" data-value="32662000">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_can_see_the_state_of_the_achievement()</td>
+              <td>1</td>
+              <td class="duration" data-value="33488000">0.033</td>
+              <td class="duration" data-value="33488000">0.033</td>
+              <td class="duration" data-value="33488000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_can_see_the_state_of_the_achievement_change()</td>
+              <td>1</td>
+              <td class="duration" data-value="43139000">0.043</td>
+              <td class="duration" data-value="43139000">0.043</td>
+              <td class="duration" data-value="43139000">0.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_click_the_view_achieved_achievements_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="124920000">0.124</td>
+              <td class="duration" data-value="124920000">0.124</td>
+              <td class="duration" data-value="124920000">0.124</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_click_the_view_unachieved_achievements_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="115020000">0.115</td>
+              <td class="duration" data-value="115020000">0.115</td>
+              <td class="duration" data-value="115020000">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.i_visit_the_achievements_page(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="730048000">0.730</td>
+              <td class="duration" data-value="730048000">0.730</td>
+              <td class="duration" data-value="730048000">0.730</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="598162">0.000</td>
+              <td class="duration" data-value="598162">0.005</td>
+              <td class="duration" data-value="25721000">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="42767">0.000</td>
+              <td class="duration" data-value="42767">0.000</td>
+              <td class="duration" data-value="1839000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.achievementStepDefinitions.the_achievements_page_is_loaded()</td>
+              <td>1</td>
+              <td class="duration" data-value="7963000">0.007</td>
+              <td class="duration" data-value="7963000">0.007</td>
+              <td class="duration" data-value="7963000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.filterCategoryDefinitions.I_click_on_the_category_button(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="74996500">0.074</td>
+              <td class="duration" data-value="74996500">0.089</td>
+              <td class="duration" data-value="299986000">0.299</td>
+              <td class="failed">75.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.filterCategoryDefinitions.I_visit_the_search_page()</td>
+              <td>4</td>
+              <td class="duration" data-value="421029250">0.421</td>
+              <td class="duration" data-value="421029250">0.457</td>
+              <td class="duration" data-value="1684117000">1.684</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.filterCategoryDefinitions.i_should_see_filter_courses_in_category_page(int)</td>
+              <td>4</td>
+              <td class="duration" data-value="11290250">0.011</td>
+              <td class="duration" data-value="11290250">0.015</td>
+              <td class="duration" data-value="45161000">0.045</td>
+              <td class="failed">75.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.filterCategoryDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="917418">0.000</td>
+              <td class="duration" data-value="917418">0.013</td>
+              <td class="duration" data-value="39449000">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.filterCategoryDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="21372">0.000</td>
+              <td class="duration" data-value="21372">0.000</td>
+              <td class="duration" data-value="919000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iClickSubmit()</td>
+              <td>1</td>
+              <td class="duration" data-value="52320000">0.052</td>
+              <td class="duration" data-value="52320000">0.052</td>
+              <td class="duration" data-value="52320000">0.052</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iClickTheFirstAnswer()</td>
+              <td>1</td>
+              <td class="duration" data-value="149245000">0.149</td>
+              <td class="duration" data-value="149245000">0.149</td>
+              <td class="duration" data-value="149245000">0.149</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iClickTheSecondAnswer()</td>
+              <td>1</td>
+              <td class="duration" data-value="130075000">0.130</td>
+              <td class="duration" data-value="130075000">0.130</td>
+              <td class="duration" data-value="130075000">0.130</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iClickTheThirdAnswer()</td>
+              <td>2</td>
+              <td class="duration" data-value="55590500">0.055</td>
+              <td class="duration" data-value="55590500">0.056</td>
+              <td class="duration" data-value="111181000">0.111</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iShouldSeeTheProgressBarIsOne()</td>
+              <td>1</td>
+              <td class="duration" data-value="31749000">0.031</td>
+              <td class="duration" data-value="31749000">0.031</td>
+              <td class="duration" data-value="31749000">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iShouldSeeTheProgressBarIsTwo()</td>
+              <td>1</td>
+              <td class="duration" data-value="18859000">0.018</td>
+              <td class="duration" data-value="18859000">0.018</td>
+              <td class="duration" data-value="18859000">0.018</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iShouldSeeTheQuestionBooleanIsTheSameAsString()</td>
+              <td>1</td>
+              <td class="duration" data-value="37767000">0.037</td>
+              <td class="duration" data-value="37767000">0.037</td>
+              <td class="duration" data-value="37767000">0.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iShouldSeeTheQuestionWhatIsAnExampleOfACharacter()</td>
+              <td>1</td>
+              <td class="duration" data-value="22803000">0.022</td>
+              <td class="duration" data-value="22803000">0.022</td>
+              <td class="duration" data-value="22803000">0.022</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.iVisitTheMCQPageWithTheId(int)</td>
+              <td>3</td>
+              <td class="duration" data-value="266217000">0.266</td>
+              <td class="duration" data-value="266217000">0.349</td>
+              <td class="duration" data-value="798651000">0.798</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="616883">0.000</td>
+              <td class="duration" data-value="616883">0.005</td>
+              <td class="duration" data-value="26526000">0.026</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="17186">0.000</td>
+              <td class="duration" data-value="17186">0.000</td>
+              <td class="duration" data-value="739000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.theFirstAnswerCorrectnessIsNotShown()</td>
+              <td>1</td>
+              <td class="duration" data-value="27967000">0.027</td>
+              <td class="duration" data-value="27967000">0.027</td>
+              <td class="duration" data-value="27967000">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.theFourthAnswerCorrectnessIsNotShown()</td>
+              <td>1</td>
+              <td class="duration" data-value="77645000">0.077</td>
+              <td class="duration" data-value="77645000">0.077</td>
+              <td class="duration" data-value="77645000">0.077</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.theMCQPageLoads()</td>
+              <td>3</td>
+              <td class="duration" data-value="7257666">0.007</td>
+              <td class="duration" data-value="7257666">0.008</td>
+              <td class="duration" data-value="21773000">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.theSecondAnswerShouldBeMarkedAsCorrect()</td>
+              <td>1</td>
+              <td class="duration" data-value="29063000">0.029</td>
+              <td class="duration" data-value="29063000">0.029</td>
+              <td class="duration" data-value="29063000">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.practiceStepDefinitions.theThirdAnswerShouldBeMarkedAsCorrect()</td>
+              <td>1</td>
+              <td class="duration" data-value="28817000">0.028</td>
+              <td class="duration" data-value="28817000">0.028</td>
+              <td class="duration" data-value="28817000">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.sortAlpStepDefinitions.I_click_on_the_sort_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="129990000">0.129</td>
+              <td class="duration" data-value="129990000">0.129</td>
+              <td class="duration" data-value="129990000">0.129</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.sortAlpStepDefinitions.I_navigate_to_the_search_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="326767000">0.326</td>
+              <td class="duration" data-value="326767000">0.326</td>
+              <td class="duration" data-value="326767000">0.326</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.sortAlpStepDefinitions.i_should_see_courses_order_alphabetically()</td>
+              <td>1</td>
+              <td class="duration" data-value="65861000">0.065</td>
+              <td class="duration" data-value="65861000">0.065</td>
+              <td class="duration" data-value="65861000">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.sortAlpStepDefinitions.setup()</td>
+              <td>43</td>
+              <td class="duration" data-value="665930">0.000</td>
+              <td class="duration" data-value="665930">0.003</td>
+              <td class="duration" data-value="28635000">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">nz.ac.auckland.se754.web.stepdefs.sortAlpStepDefinitions.tearDown()</td>
+              <td>43</td>
+              <td class="duration" data-value="19372">0.000</td>
+              <td class="duration" data-value="19372">0.000</td>
+              <td class="duration" data-value="833000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>135</td>
+            <td>1465</td>
+            <td class="duration">0.189</td>
+            <td class="duration">2:27.510</td>
+            <td class="duration">4:37.994</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

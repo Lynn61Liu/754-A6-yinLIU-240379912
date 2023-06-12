@@ -1,0 +1,34 @@
+nav {
+    border-color: transparent;
+    background-color: #24262b;
+    height:50px;
+}
+
+
+
+.navbar h1 {
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    color: #e91e63;
+    padding: 0px 40px;
+    font-size: 24px;
+    margin-right: 40px;
+}
+.navbar .container{
+    display: flex;
+    padding-top: 10px;
+
+}
+.container .searchBar {
+    display: flex;
+}
+#search{
+    width: 200px;
+    height: 30px;
+
+}
+#searchBtn {
+    width: 60px;
+    height: 30px;
+}
+
+
