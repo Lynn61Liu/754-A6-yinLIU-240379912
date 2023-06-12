@@ -12,10 +12,5 @@ https://github.com/raymondxyz/SE754-A6/pulls
 8 scenarios are involved of SearchNfilter feature.
 
 
-Traceability Matrix of Yin LIu
-L1  SearchNfilters  Search course use search bar
-L1  SearchNfilters  courses filter by category
-L1  SearchNfilters  sort all course alphabetically
-S3  FAQ View FAQ page   Success
-S3  FAQ View specific question  Success
+
 
